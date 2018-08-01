@@ -108,19 +108,26 @@ namespace idfinder
 
         public static void FindWordIds()
         {
-            var words = File.ReadAllLines(Resources.words);
+            var words = Resources.words.Split('\n');
             using (StreamWriter sw = File.AppendText("wordids.txt"))
             {
                 MainForm.mf.totalIds.Maximum = words.Length;
                 foreach (var word in words)
                 {
-                    var result = SteamWebAPI.General().ISteamUser().ResolveVanityURL(word).GetResponse();
-                    if (result.Data.Message == "No match")
+                    try
                     {
-                        sw.WriteLine(word);
-                        sw.Flush();
+                        var result = SteamWebAPI.General().ISteamUser().ResolveVanityURL(word).GetResponse();
+                        if (result.Data.Message == "No match")
+                        {
+                            sw.WriteLine(word);
+                            sw.Flush();
+                        }
+                        MainForm.mf.totalIds.Value++;
                     }
-                    MainForm.mf.totalIds.Value++;
+                    catch (Exception)
+                    {
+                        MessageBox.Show(word);
+                    }
                 }
             }
         }
