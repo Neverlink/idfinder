@@ -32,6 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.totalIds = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,12 +83,20 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Letters";
             // 
+            // totalIds
+            // 
+            this.totalIds.Location = new System.Drawing.Point(283, 345);
+            this.totalIds.Name = "totalIds";
+            this.totalIds.Size = new System.Drawing.Size(585, 36);
+            this.totalIds.TabIndex = 3;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1197, 593);
+            this.Controls.Add(this.totalIds);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
@@ -105,6 +114,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ProgressBar totalIds;
     }
 }
 

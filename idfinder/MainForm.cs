@@ -11,14 +11,16 @@ using System.Numerics;
 using PortableSteam;
 using System.IO;
 using idfinder.Properties;
-
+using Dab;
 namespace idfinder
 {
     public partial class MainForm : Form
     {
+        public static MainForm mf = new MainForm();
         public MainForm()
         {
             InitializeComponent();
+            mf = this;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -30,15 +32,17 @@ namespace idfinder
         {
             string method = comboBox1.Text;
             int count = (int)numericUpDown1.Value;
-            List<string> ids = new List<string>();
 
             switch (method)
             {
                 case "Word":
+                    Utility.FindWordIds(count);
                     break;
                 case "Letters":
+                    Utility.FindLetterIds(count);
                     break;
                 case "Numbers":
+                    Utility.FindNumberIds(count);
                     break;
                 default:
                     MessageBox.Show("Invalid method!");
@@ -47,22 +51,4 @@ namespace idfinder
             //var result = SteamWebAPI.General().ISteamUser().ResolveVanityURL("kneecocks").GetResponse();
         }
     }
-    //class Student
-    //{
-    //    public string Name { get; set; }
-    //    public int Age { get; set; }
-    //    public double AvgGrade { get; set; }
-
-    //    public void SayDespacito()
-    //    {
-    //        MessageBox.Show(this.Name + " says despacito");
-
-    //    }
-    //    public Student(string name, int age, double avggrade)
-    //    {
-    //        this.Name = name;
-    //        this.Age = age;
-    //        this.AvgGrade = avggrade;
-    //    }
-    //}
 }
