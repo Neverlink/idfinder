@@ -48,12 +48,20 @@ namespace idfinder
                         {
                             for (char k = 'a'; k <= 'z'; k++)
                             {
-                                var result = SteamWebAPI.General().ISteamUser().ResolveVanityURL($"{i}{j}{k}").GetResponse();
-                                if (result.Data.Message == "No match")
+                                try
                                 {
-                                    sw.WriteLine($"{i}{j}{k}");
-                                    sw.Flush();
+                                    var result = SteamWebAPI.General().ISteamUser().ResolveVanityURL($"{i}{j}{k}").GetResponse();
+                                    if (result.Data.Message == "No match")
+                                    {
+                                        sw.WriteLine($"{i}{j}{k}");
+                                        sw.Flush();
+                                    }
                                 }
+                                catch (Exception)
+                                {
+
+                                }
+                              
                                 MainForm.mf.totalIds.Value++;
                             }
                         }
