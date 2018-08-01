@@ -1,0 +1,17 @@
+D:\!Projects\idfinder\idfinder\bin\Release\idfinder.exe.config
+D:\!Projects\idfinder\idfinder\bin\Release\idfinder.exe
+D:\!Projects\idfinder\idfinder\bin\Release\idfinder.pdb
+D:\!Projects\idfinder\idfinder\bin\Release\Newtonsoft.Json.dll
+D:\!Projects\idfinder\idfinder\bin\Release\PortableSteam.dll
+D:\!Projects\idfinder\idfinder\bin\Release\System.Net.Http.Extensions.dll
+D:\!Projects\idfinder\idfinder\bin\Release\System.Net.Http.Primitives.dll
+D:\!Projects\idfinder\idfinder\bin\Release\Newtonsoft.Json.xml
+D:\!Projects\idfinder\idfinder\bin\Release\System.Net.Http.Extensions.xml
+D:\!Projects\idfinder\idfinder\bin\Release\System.Net.Http.Primitives.xml
+D:\!Projects\idfinder\idfinder\obj\Release\idfinder.csproj.App.config
+D:\!Projects\idfinder\idfinder\obj\Release\idfinder.MainForm.resources
+D:\!Projects\idfinder\idfinder\obj\Release\idfinder.Properties.Resources.resources
+D:\!Projects\idfinder\idfinder\obj\Release\idfinder.csproj.GenerateResource.Cache
+D:\!Projects\idfinder\idfinder\obj\Release\idfinder.csproj.CoreCompileInputs.cache
+D:\!Projects\idfinder\idfinder\obj\Release\idfinder.exe
+D:\!Projects\idfinder\idfinder\obj\Release\idfinder.pdb

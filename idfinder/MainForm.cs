@@ -36,7 +36,7 @@ namespace idfinder
 
             switch (method)
             {
-                case "Word":
+                case "Words":
                     Utility.FindWordIds();
                     break;
                 case "Letters":
