@@ -35,7 +35,7 @@ namespace idfinder
             switch (method)
             {
                 case "Word":
-                    Utility.FindWordIds(count);
+                    Utility.FindWordIds();
                     break;
                 case "Letters":
                     Utility.FindLetterIds(count);
@@ -47,7 +47,6 @@ namespace idfinder
                     MessageBox.Show("Invalid method!");
                     return;
             }
-            //var result = SteamWebAPI.General().ISteamUser().ResolveVanityURL("kneecocks").GetResponse();
         }
     }
 }

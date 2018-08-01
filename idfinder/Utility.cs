@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using PortableSteam;
+using idfinder.Properties;
 namespace idfinder
 {
     class Utility
@@ -77,7 +78,7 @@ namespace idfinder
                             MainForm.mf.totalIds.Value++;
                         }
                     }
-                  
+
                 }
             }
             else if (count == 3)
@@ -105,9 +106,24 @@ namespace idfinder
             }
         }
 
-        public static void FindWordIds(int count)
+        public static void FindWordIds()
         {
-
+            var words = File.ReadAllLines(Resources.words);
+            using (StreamWriter sw = File.AppendText("wordids.txt"))
+            {
+                MainForm.mf.totalIds.Maximum = words.Length;
+                foreach (var word in words)
+                {
+                    var result = SteamWebAPI.General().ISteamUser().ResolveVanityURL(word).GetResponse();
+                    if (result.Data.Message == "No match")
+                    {
+                        sw.WriteLine(word);
+                        sw.Flush();
+                    }
+                    MainForm.mf.totalIds.Value++;
+                }
+            }
         }
     }
 }
+

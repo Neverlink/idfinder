@@ -68,5 +68,140 @@ namespace idfinder.Properties {
                 return ResourceManager.GetString("api", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to the
+        ///of
+        ///and
+        ///to
+        ///a
+        ///in
+        ///for
+        ///is
+        ///on
+        ///that
+        ///by
+        ///this
+        ///with
+        ///i
+        ///you
+        ///it
+        ///not
+        ///or
+        ///be
+        ///are
+        ///from
+        ///at
+        ///as
+        ///your
+        ///all
+        ///have
+        ///new
+        ///more
+        ///an
+        ///was
+        ///we
+        ///will
+        ///home
+        ///can
+        ///us
+        ///if
+        ///page
+        ///my
+        ///has
+        ///free
+        ///but
+        ///our
+        ///one
+        ///do
+        ///no
+        ///time
+        ///they
+        ///site
+        ///he
+        ///up
+        ///may
+        ///what
+        ///news
+        ///out
+        ///use
+        ///any
+        ///see
+        ///only
+        ///so
+        ///his
+        ///when
+        ///here
+        ///who
+        ///web
+        ///also
+        ///now
+        ///help
+        ///get
+        ///pm
+        ///view
+        ///c
+        ///e
+        ///am
+        ///been
+        ///how
+        ///were
+        ///me
+        ///s
+        ///some
+        ///its
+        ///like
+        ///x
+        ///than
+        ///find
+        ///date
+        ///back
+        ///top
+        ///had
+        ///list
+        ///name
+        ///just
+        ///over
+        ///year
+        ///day
+        ///into
+        ///two
+        ///n
+        ///re
+        ///next
+        ///used
+        ///go
+        ///b
+        ///work
+        ///last
+        ///most
+        ///buy
+        ///data
+        ///make
+        ///them
+        ///post
+        ///her
+        ///city
+        ///t
+        ///add
+        ///such
+        ///best
+        ///then
+        ///jan
+        ///good
+        ///well
+        ///d
+        ///info
+        ///high
+        ///m
+        ///each
+        ///she
+        ///ve [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string words {
+            get {
+                return ResourceManager.GetString("words", resourceCulture);
+            }
+        }
     }
 }
