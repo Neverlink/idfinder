@@ -11,6 +11,8 @@ using System.Numerics;
 using PortableSteam;
 using System.IO;
 using idfinder.Properties;
+using System.Diagnostics;
+
 namespace idfinder
 {
     public partial class MainForm : Form
@@ -46,6 +48,14 @@ namespace idfinder
                 default:
                     MessageBox.Show("Invalid method!");
                     return;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Made by neverlink - https://neverlink.tk. Want to visit my site?", "About", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Process.Start("https://neverlink.tk");
             }
         }
     }
