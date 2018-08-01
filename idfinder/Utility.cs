@@ -26,11 +26,11 @@ namespace Dab
                             if (result.Data.Message == "No match")
                             {
                                 sw.WriteLine($"{i}{j}");
+                                sw.Flush();
                             }
                             MainForm.mf.totalIds.Value++;
                         }
                     }
-                    sw.Flush();
                 }
             }
             else if (count == 3)
@@ -48,12 +48,12 @@ namespace Dab
                                 if (result.Data.Message == "No match")
                                 {
                                     sw.WriteLine($"{i}{j}{k}");
+                                    sw.Flush();
                                 }
                                 MainForm.mf.totalIds.Value++;
                             }
                         }
                     }
-                    sw.Flush();
                 }
             }
         }
@@ -62,7 +62,7 @@ namespace Dab
         {
             if (count == 2)
             {
-                using (StreamWriter sw = File.AppendText("2letterids.txt"))
+                using (StreamWriter sw = File.AppendText("2numberids.txt"))
                 {
                     MainForm.mf.totalIds.Maximum = 26 * 26;
                     for (int i = 0; i <= 9; i++)
@@ -73,16 +73,17 @@ namespace Dab
                             if (result.Data.Message == "No match")
                             {
                                 sw.WriteLine($"{i}{j}");
+                                sw.Flush();
                             }
                             MainForm.mf.totalIds.Value++;
                         }
                     }
-                    sw.Flush();
+                  
                 }
             }
             else if (count == 3)
             {
-                using (StreamWriter sw = File.AppendText("3letterids.txt"))
+                using (StreamWriter sw = File.AppendText("3numberids.txt"))
                 {
                     MainForm.mf.totalIds.Maximum = 26 * 26 * 26;
                     for (int i = 0; i <= 9; i++)
@@ -95,12 +96,12 @@ namespace Dab
                                 if (result.Data.Message == "No match")
                                 {
                                     sw.WriteLine($"{i}{j}{k}");
+                                    sw.Flush();
                                 }
                                 MainForm.mf.totalIds.Value++;
                             }
                         }
                     }
-                    sw.Flush();
                 }
             }
         }
