@@ -32,6 +32,10 @@ namespace idfinder
                         }
                     }
                 }
+                if (MessageBox.Show("Complete! Want to open the file?", "Complete!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    File.Open("2letterids.txt", FileMode.Open);
+                }
             }
             else if (count == 3)
             {
@@ -54,6 +58,10 @@ namespace idfinder
                             }
                         }
                     }
+                }
+                if (MessageBox.Show("Complete! Want to open the file?", "Complete!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    File.Open("3letterids.txt", FileMode.Open);
                 }
             }
         }
@@ -80,6 +88,10 @@ namespace idfinder
                     }
 
                 }
+                if (MessageBox.Show("Complete! Want to open the file?", "Complete!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    File.Open("2numberids.txt", FileMode.Open);
+                }
             }
             else if (count == 3)
             {
@@ -103,7 +115,12 @@ namespace idfinder
                         }
                     }
                 }
+                if (MessageBox.Show("Complete! Want to open the file?", "Complete!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    File.Open("3numberids.txt", FileMode.Open);
+                }
             }
+
         }
 
         public static void FindWordIds()
@@ -116,11 +133,14 @@ namespace idfinder
                 {
                     try
                     {
-                        var result = SteamWebAPI.General().ISteamUser().ResolveVanityURL(word).GetResponse();
-                        if (result.Data.Message == "No match")
+                        if(word.Length >= 3)
                         {
-                            sw.WriteLine(word);
-                            sw.Flush();
+                            var result = SteamWebAPI.General().ISteamUser().ResolveVanityURL(word).GetResponse();
+                            if (result.Data.Message == "No match")
+                            {
+                                sw.WriteLine(word);
+                                sw.Flush();
+                            }
                         }
                         MainForm.mf.totalIds.Value++;
                     }
@@ -129,6 +149,10 @@ namespace idfinder
                         MessageBox.Show(word);
                     }
                 }
+            }
+            if (MessageBox.Show("Complete! Want to open the file?", "Complete!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                File.Open("wordids.txt", FileMode.Open);
             }
         }
     }

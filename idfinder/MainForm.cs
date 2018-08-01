@@ -33,7 +33,7 @@ namespace idfinder
         {
             string method = comboBox1.Text;
             int count = (int)numericUpDown1.Value;
-
+            totalIds.Value = 0;
             switch (method)
             {
                 case "Words":
@@ -56,6 +56,18 @@ namespace idfinder
             if (MessageBox.Show("Made by neverlink - https://neverlink.tk. Want to visit my site?", "About", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Process.Start("https://neverlink.tk");
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Words")
+            {
+                numericUpDown1.Enabled = false;
+            }
+            else
+            {
+                numericUpDown1.Enabled = true;
             }
         }
     }
