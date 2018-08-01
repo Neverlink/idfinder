@@ -1,0 +1,10 @@
+D:\!Projects\idfinder\idfinder\bin\Debug\idfinder.exe.config
+D:\!Projects\idfinder\idfinder\bin\Debug\idfinder.exe
+D:\!Projects\idfinder\idfinder\bin\Debug\idfinder.pdb
+D:\!Projects\idfinder\idfinder\obj\Debug\idfinder.csprojResolveAssemblyReference.cache
+D:\!Projects\idfinder\idfinder\obj\Debug\idfinder.Form1.resources
+D:\!Projects\idfinder\idfinder\obj\Debug\idfinder.Properties.Resources.resources
+D:\!Projects\idfinder\idfinder\obj\Debug\idfinder.csproj.GenerateResource.Cache
+D:\!Projects\idfinder\idfinder\obj\Debug\idfinder.csproj.CoreCompileInputs.cache
+D:\!Projects\idfinder\idfinder\obj\Debug\idfinder.exe
+D:\!Projects\idfinder\idfinder\obj\Debug\idfinder.pdb
