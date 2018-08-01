@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using PortableSteam;
-using idfinder;
-namespace Dab
+namespace idfinder
 {
     class Utility
     {

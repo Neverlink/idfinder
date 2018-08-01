@@ -11,7 +11,6 @@ using System.Numerics;
 using PortableSteam;
 using System.IO;
 using idfinder.Properties;
-using Dab;
 namespace idfinder
 {
     public partial class MainForm : Form
